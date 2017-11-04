@@ -2,9 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <h2>Products</h2>
+  <div *ngFor="let item of items">{{ item }}</div>
+`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  public items = [
+    'TV',
+    'Computer',
+    'Stereo'
+  ];
 }
