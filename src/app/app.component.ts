@@ -4,14 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <h2>Products</h2>
-  <div *ngFor="let item of items">{{ item }}</div>
+  <my-products *ngFor="let product of products" [product]="product"></my-products>
 `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public items = [
-    'TV',
-    'Computer',
-    'Stereo'
-  ];
+  public products: Array<Object> = [
+    {title: 'TV', price: '$499.99'},
+    {title: 'Computer', price: '$999.99'},
+    {title: 'Stereo', price: '$99.99'}
+  ]
 }
