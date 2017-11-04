@@ -1,6 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-</div>
-<h2>Electronics</h2>
-
-
+<div class="container">
+    <h2>{{ title }}</h2>
+  
+    <search-cmp (search)="onSearch($event)"></search-cmp>
+  
+    <product-list-cmp
+      [header]="'All Products'"
+      [products]="products">
+    </product-list-cmp>
+  
+  </div>
+  
